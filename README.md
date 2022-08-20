@@ -7,15 +7,21 @@ Las preguntas pueden variar desde cultura general, historia, matemáticas, físi
 # Proceso pregunta de Matemáticas
 
 definir promedio_num (num1, num2, num3)
+
 	promedio = (num1 + num2 + num3) /3
+    
 	regresar promedio 
 
 números de promedio = 12, 9, 6
 
 imprimir (Cual es el promedio de num1, num2, num3?)
+
 si respuesta_usuario == 9
+
 	imprimir(respuesta correcta!)
+    
 sí no:
+
 	Imprimir(respuesta incorrecta)
 
 
@@ -23,9 +29,13 @@ sí no:
 # Proceso pregunta Cultura General
 
 imprimir(En qué año fue creado el Tecnológico de Monterrey?)
+
 si respuesta usuario = 1943
+
 	regresar(correcto, +1 punto)
+    
 sí no
+
 	regresar(incorrecto, no obtienes puntos)
 
 
