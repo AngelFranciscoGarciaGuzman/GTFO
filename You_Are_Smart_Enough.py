@@ -112,22 +112,9 @@ def pelea_dados(var1, var2, d5):
 
 resultado_dados = pelea_dados(dado_jugador, dado_computadora, d5)
 if resultado_dados == True:
-    print("Ganaste el duelo con una puntuación de: ", dado_jugador + d5,"Mientas que la computadora obtuvo: ", dado_computadora)
+    print("Ganaste el duelo con una puntuación de: ", dado_jugador + d5,"Mientras que la computadora obtuvo: ", dado_computadora)
 else:
     print("Haz perdido el duelo con una puntuación de:",dado_jugador + d5,"Mientras que la computadora obtuvo:",dado_computadora)
     print("Tu computadora se autodestruirá en:")
     countdown(10)
     exit()
-
-
-
-
-
-
-
-
-
-
-
-
-
