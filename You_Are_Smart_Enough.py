@@ -1,11 +1,9 @@
 import random
 import time
 
-
-
 #preparar los números de forma aleatoria
-random1 =random.randint(1, 99)
-random2 =random.randint(1, 99)
+random1 =random.randint(1,99)
+random2 =random.randint(1,99)
 random3 =random.randint(1,3)
 
 #Función de pregunta sumas
@@ -78,19 +76,27 @@ else:
     countdown(10)
     exit()
 
+password = 42069
+
 acceso = int(input())
-if acceso == 42069:
-    print("Acceso garantizado")
-else:
-    print("Acceso denegado, tu computadora se autodestruirá en:")
-    countdown(10)
-    exit()
+while acceso != password:
+    cont = 0
+    acceso = int(input("Contraseña erronea, intente otra vez: "))
+    cont = cont + 1
+    if cont == 2:
+        print("Acceso denegado por no poner bien la contraseña")
+        print("Su computadora se autodestruirá en: ")
+        countdown(10)
+    
+print("Acceso conseguido")
+
+
 
 dado_jugador = random.randint(1,20)
 dado_computadora = random.randint(1,20)
 
 print("Segunda fase: Pelea de dados")
-print("Deberás probar suerte con un dado de 20 lados contra la computadora")
+print("Deberás probar suerte con un d20 contra la computadora")
 print("Pero antes de eso, responde esta pregunta para conseguir un dado de 5 lados de ventaja")
 print("Redondo soy y es cosa anunciada, si a la derecha estoy algo valgo pero si a la izquierda estoy no valgo nada. Qué numero soy?")
 respuesta_acertijo = int(input())
@@ -112,9 +118,27 @@ def pelea_dados(var1, var2, d5):
 
 resultado_dados = pelea_dados(dado_jugador, dado_computadora, d5)
 if resultado_dados == True:
-    print("Ganaste el duelo con una puntuación de: ", dado_jugador + d5,"Mientras que la computadora obtuvo: ", dado_computadora)
+    print("Ganaste el duelo con una puntuación de: ", dado_jugador + d5,"Mientas que la computadora obtuvo: ", dado_computadora)
 else:
     print("Haz perdido el duelo con una puntuación de:",dado_jugador + d5,"Mientras que la computadora obtuvo:",dado_computadora)
     print("Tu computadora se autodestruirá en:")
     countdown(10)
     exit()
+
+print("Último castigo, adivina en qué número estoy pensando entre el 1 y el 50")
+print("No te preocupes, puedes intentarlo cuantas veces sea necesario :)")
+
+
+random_castigo = random.randint(1,50)
+
+def castigo():
+    contador = 0
+    num_castigo = int(input())
+    while num_castigo != random_castigo:
+        num_castigo = int(input())
+        contador = contador + 1
+    if num_castigo == random_castigo:
+        print("Felicidades, eres libre. Solo te costó",contador,"Intentos" )
+
+castigo()
+
