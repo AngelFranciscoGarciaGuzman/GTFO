@@ -194,11 +194,13 @@ def use_object():
                     time.sleep(1)
                     print("You use the health_pack, but you health is already at 100%")
                 else:
-                    cont = 0
-                    while cont != (100-health):
-                        health = health + 1
-                        cont = cont + 1
-                    print("Your health is now:",health)
+                    health = health + 25
+                    if health > 100:
+                        health = 100
+                        
+                    time.sleep(1)
+                    print("Your health is now",health)
+
             else:
                 time.sleep(1)
                 print("You have no health_pack left")
