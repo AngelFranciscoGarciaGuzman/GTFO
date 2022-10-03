@@ -10,7 +10,7 @@
 - Consigue la tarjeta.
 - Sal de ahí (con vida).
 
-##Contexto
+## Contexto
 Eres un prisionero a merced de una inteligencia artificial y tu propósito es completar tareas involucradas con un desastre ocurrido en el laboratorio principal bajo tierra. En este caso tu misión es conseguir una llave de acceso perdida y salir de ahí… con vida.
 
 Selecciona un nivel del laboratorio por explorar, prepara tus recursos y adéntrate en el infierno bajo tierra. Con un poco de suerte consigues la llave y sales con vida, pero recuerda administrar tus recursos, una bala puede hacer la diferencia. 
