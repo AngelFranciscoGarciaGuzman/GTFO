@@ -1,41 +1,18 @@
-# You Are (Not) Smart Enough
+# Autor
+## Ángel Francisco García Guzmán A01704203
 
-La programación también puede ser divertida en el contexto de una fiesta, este software es un juego casual en donde los jugadores escogen una modalidad de juego con diferentes preguntas y retos que deben completar antes de que el tiempo de el reto se acabe. Cuando un jugador obtenga una pregunta errónea, el software le dará un reto que debe completar. 
-Las preguntas pueden variar desde cultura general, historia, matemáticas, física o desafíos entre jugadores (lucha de pulgares, concurso de miradas etc.) 
+### Características 
 
-	
-# Proceso pregunta de Matemáticas
+-Juego de exploración y supervivencia
+-El jugador decide las acciones
+-Administra tus recursos
+-Cuida tu munición
+-Consigue la tarjeta
+-Sal de ahí (con vida)
 
-	definir promedio_num (num1, num2, num3)
+##Contexto
+Eres un prisionero a merced de una inteligencia artificial y tu propósito es completar tareas involucradas con un desastre ocurrido en el laboratorio principal bajo tierra. En este caso tu misión es conseguir una llave de acceso perdida y salir de ahí… con vida.
 
-		promedio = (num1 + num2 + num3) /3
-    
-		regresar promedio 
+Selecciona un nivel del laboratorio por explorar, prepara tus recursos y adéntrate en el infierno bajo tierra. Con un poco de suerte consigues la llave y sales con vida, pero recuerda administrar tus recursos, una bala puede hacer la diferencia. 
 
-	números de promedio = 12, 9, 6
-
-	imprimir (Cual es el promedio de num1, num2, num3?)
-
-	si respuesta_usuario == 9
-
-		imprimir(respuesta correcta!)
-    
-	sí no:
-
-		Imprimir(respuesta incorrecta)
-
-
-
-# Proceso pregunta Cultura General
-
-	imprimir(En qué año fue creado el Tecnológico de Monterrey?)
-
-	si respuesta usuario = 1943
-
-		regresar(correcto, +1 punto)
-    
-	sí no
-
-		regresar(incorrecto, no obtienes puntos)
-
-
+Inspirado en el videojuego GTFO desarrollado por la empresa 100 Chambers. 
