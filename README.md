@@ -3,12 +3,12 @@
 
 ### Características 
 
--Juego de exploración y supervivencia.
--El jugador decide las acciones.
--Administra tus recursos.
--Cuida tu munición.
--Consigue la tarjeta.
--Sal de ahí (con vida).
+- Juego de exploración y supervivencia.
+- El jugador decide las acciones.
+- Administra tus recursos.
+- Cuida tu munición.
+- Consigue la tarjeta.
+- Sal de ahí (con vida).
 
 ##Contexto
 Eres un prisionero a merced de una inteligencia artificial y tu propósito es completar tareas involucradas con un desastre ocurrido en el laboratorio principal bajo tierra. En este caso tu misión es conseguir una llave de acceso perdida y salir de ahí… con vida.
