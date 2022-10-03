@@ -2,6 +2,9 @@ import random
 import time
 from time import sleep
 
+#Proyecto escolar desarrollado por: 
+#Ángel Francisco García Guzmán A01704203
+
 #Inventario del jugador
 
 inventory = {"health_pack": 0, "ammo_pack": 0, "access_key": 0}
@@ -235,7 +238,7 @@ def move_sector():
             print("You've ran out of ammo")
             death()   
         time.sleep(1)     
-        print("You killed them without waking them up")
+        print("You kill them without waking them up")
         time.sleep(1)
         print("Your ammo is now:",ammo)
         actions()
