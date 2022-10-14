@@ -8,9 +8,8 @@ from time import sleep
 #Inventario del jugador
 
 inventory = {"health_pack": 0, "ammo_pack": 0, "access_key": 0}
-
-character_values = [[100],[100]]
-#lista anidada con las estadisticas del jugador (Health y Ammo), la verdad prefiero el metodo anterior de guardar cada uno como una variable en vez de utilizar listas, esto lo hago para el avance del proyecto "listas anidadas" pero si me agrada como funciona el diccionario para el inventario del jugador
+health = 100
+ammo = 100
 
 rundown_number=""
 
@@ -138,7 +137,7 @@ def search(x, y, z):
         search_value = search_value - 1
         if ammo_pack == 5:
             time.sleep(1)
-            print("You've found: ammo_pack")
+            print("\nYou've found: ammo_pack")
             inventory["ammo_pack"] = inventory["ammo_pack"] + 1
             if inventory["ammo_pack"] == 2:
                 time.sleep(1)
@@ -146,7 +145,7 @@ def search(x, y, z):
                 inventory["ammo_pack"] = inventory["ammo_pack"] - 1
         else:
             time.sleep(1)
-            print("You've found no ammo_pack")
+            print("\nYou didn't find any ammo_pack")
 
         if health_pack == 5:
             time.sleep(1)
@@ -158,7 +157,7 @@ def search(x, y, z):
                 inventory["health_pack"] = inventory["health_pack"] - 1
         else:
             time.sleep(1)
-            print("You've found no health_pack")
+            print("You didn't find any health_pack")
         
         if access_key == 10:
             time.sleep(1)
@@ -180,7 +179,8 @@ def search(x, y, z):
 
 #Funcion de usar objeto para usuario, agragando y removiendo de la lista Inventory 
 def use_object():
-    global character_values
+    global health
+    global ammo
     i = False
     check_inventory(inventory)
     while i == False:
@@ -190,16 +190,16 @@ def use_object():
         if use == "health_pack":
             if inventory["health_pack"] == 1:
                 inventory["health_pack"] = inventory["health_pack"] - 1
-                if character_values[0][0] >= 100:
+                if health >= 100:
                     time.sleep(1)
                     print("You use the health_pack, but you health is already at 100%")
                 else:
-                    character_values[0][0] = character_values[0][0] + 25
-                    if character_values[0][0] > 100:
-                        character_values[0][0] = 100
+                    health = health + 25
+                    if health > 100:
+                        health = 100
                         
                     time.sleep(1)
-                    print("Your health is now",character_values[0][0])
+                    print("Your health is now",health)
 
             else:
                 time.sleep(1)
@@ -208,9 +208,9 @@ def use_object():
         elif use == "ammo_pack":
             if inventory["ammo_pack"] == 1:
                 inventory["ammo_pack"] = inventory["ammo_pack"] - 1
-                character_values[1][0] = character_values[1][0] + 25
+                ammo = ammo + 25
                 time.sleep(1)
-                print("Your ammo is now:",character_values[1][0])
+                print("Your ammo is now:",ammo)
             else:
                 time.sleep(1)
                 print("You have no ammo_pack left")
@@ -221,10 +221,10 @@ def use_object():
             i = False
     actions()
 
-#Funcion para moverse entre zona y zona, cambiando el valor de search_value para que le permita volver a buscar objetos en la zona
 def move_sector():
-    global character_values
     global search_value
+    global ammo
+    global health
 
     search_value = search_value + 1
     if search_value > 1:
@@ -235,24 +235,24 @@ def move_sector():
     print("You've found:",random.randint(2,7),"sleepers")
     time.sleep(1)
     if random.randint(1,2) == 2:
-        character_values[1][0] = character_values[1][0] - random.randint(7, 14)
-        if character_values[1][0] <= 0:
+        ammo = ammo - random.randint(7, 14)
+        if ammo <= 0:
             print("You've ran out of ammo")
             death()   
         time.sleep(1)     
         print("You kill them without waking them up")
         time.sleep(1)
-        print("Your ammo is now:",character_values[1][0])
+        print("Your ammo is now:",ammo)
         actions()
     else:
-        character_values[0][0] = character_values[0][0] - random.randint(20,31)
-        if character_values[0][0] <= 0:
+        health = health - random.randint(20,31)
+        if health <= 0:
             time.sleep(1)
             print("You have 0 health points left")
             time.sleep(1)
             death()
-        character_values[1][0] = character_values[1][0] - random . randint(15,37)
-        if character_values[1][0] <= 0:
+        ammo = ammo - random . randint(15,37)
+        if ammo <= 0:
             time.sleep(1)
             print("You've ran out of ammo")
             time.sleep(1)
@@ -260,9 +260,9 @@ def move_sector():
         time.sleep(1)
         print("You've woken them up")
         time.sleep(1)
-        print("Your ammo left is:",character_values[1][0])
+        print("Your ammo left is:",ammo)
         time.sleep(1)
-        print("You've taken damage, your health is now:",character_values[0][0])
+        print("You've taken damage, your health is now:",health)
         actions()
 
 
@@ -278,7 +278,7 @@ def death():
 #Funcion de acciones para el usuario
 def actions():
     time.sleep(1)
-    print("1. Search location\n2. Use object from your inventory\n3. Go to the next sector")
+    print("\n1. Search location\n2. Use object from your inventory\n3. Go to the next sector\n")
     option = int(input())
     i = False
     while i == False:
